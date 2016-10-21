@@ -69,7 +69,7 @@ Symbols首先分成Term和type, term下有Module和Method, Type下有Class。在
 * 接口定义隔离化
 * API类型别名化
 
-##### 1. Hierarchy
+#### 1. Hierarchy
 
 层级关系，举例：参数symbol的owner是方法，方法symbol的owner是class，trait或者object，class的owner是package等等，最顶层是*NoSymbol*。
 注意不像官方文档说描述的，访问*NoSymbol*的owner并不会抛出异常，而是返回*NoSymbol*自身。
