@@ -28,8 +28,9 @@ def get: T
   def _3      = args
 ```
 
-我只想说一句，2013年的pr，书上还按照Option的语法来写，怪不得看到quasiquotes的源码的时候，看着抽取器返回`Any`,太很郁闷了（知道这个知识点漏了，就是找不着官方说明文档）。
-現在，我們可以這樣描述，如果是Extractor Macros的話，返回值可以是Any，compiler在macro展開之前不會檢查。
+我只想说一句，2013年的pr，书上还按照Option的语法来写，怪不得看到quasiquotes的源码的时候，看着抽取器返回`Any`,郁闷（知道这个知识点漏了，就是找不着官方说明文档）。
+~~現在，我們可以這樣描述，如果是Extractor Macros的話，返回值可以是Any，compiler在macro展開之前不會檢查。~~
+上述描述是错误的，scala macro member说文档日后完善，对于def macro 返回的类型是静态还是动态,主要取决于context是白盒还是黑盒。
 
 ```
 package scala.reflect
